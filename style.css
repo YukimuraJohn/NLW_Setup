@@ -5,7 +5,6 @@
 }
 
 body {
-    display: flex;
     background-color: #09090a;
 
     height: 100vh;
@@ -16,8 +15,16 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    
     padding: 3rem;
+    
+    position: fixed;
+    width: 100%;
+
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 35%, rgba(9,9,10,0.80) 75%);
+    /* blur effect */
+    backdrop-filter: blur(0.1rem);
 }
 
 button {
@@ -41,17 +48,17 @@ button {
 
 #form-habits {
     display: flex;
+    padding: 11.5rem 3rem 3rem;
 
-    padding: 0 3rem;
-
+    width: fit-content;
 }
 
 .habits {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.25rem;
 
-    margin-top: 3.5rem;
+    margin-top: 3rem;
 }
 
 .habit {
@@ -60,14 +67,14 @@ button {
     justify-content: center;
     
     width: 4rem;
-    height: 4rem;
+    height: 3.8rem;
 
     font-size: 2rem;
 }
 
 .days {
     display: flex;
-    gap: 3rem;
+    gap: 2.5rem;
 
     margin-left: 2rem;
 }
@@ -76,7 +83,7 @@ button {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-
+    align-items: center;
 }
 
 .day div {
@@ -96,8 +103,8 @@ input {
     appearance: none;
     -webkit-appearance: none;
 
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
 
     border: 2px solid #27272A;
     border-radius: 0.5rem;
@@ -108,4 +115,11 @@ input {
 input:checked {
     background: #8B5CF6;
     border: 2px solid #A78BFA;
+}
+
+/* Responsive */
+@media (max-width: 570px) {
+    button div {
+        display: none;
+    }
 }
