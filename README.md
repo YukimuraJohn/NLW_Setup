@@ -18,7 +18,7 @@ Esse projeto foi feito pelo John no evento NLW-Setup, que é um evento exclusivo
 <br>
 
 <p align="center">
-  <img alt="projeto Habits" src=".github/preview.jpg" width="100%">
+  <img alt="projeto Habits" src="./.github/preview.jpg" width="100%">
 </p>
 
 ## 🚀 Tecnologias
