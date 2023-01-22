@@ -129,7 +129,7 @@ var NLWSetup = class NLWSetup {
    * @return {string} `MM-DD`
    */
   #getFormattedDate(date) {
-    const [day] = date.split(" ")
+    const day = date
     return day
     // const [day, month] = date.split("/")
     // return month + "-" + day
@@ -206,6 +206,7 @@ var NLWSetup = class NLWSetup {
    */
   dayExists(date) {
     const formattedDate = this.#getFormattedDate(date)
+    // console.log(this.#getFormattedDate(date))
     return [...this.days].includes(formattedDate)
   }
   /**
@@ -220,11 +221,18 @@ var NLWSetup = class NLWSetup {
    * - `MM` month with 2 digits (01-12)
    */
   addDay(date) {
-    if (!date || !date?.includes("/")) return
+    if (!date) return
     if (this.dayExists(date)) return
+    // console.log(this.#getFormattedDate(date))
     this.days.add(this.#getFormattedDate(date))
     this.renderLayout()
   }
+  // addDay(date) {
+  //   if (!date || !date?.includes("/")) return
+  //   if (this.dayExists(date)) return
+  //   this.days.add(this.#getFormattedDate(date))
+  //   this.renderLayout()
+  // }
   /**
    * @param {string} date `DD/MM`
    * - `DD` day with 2 digits (01-31)

@@ -6,9 +6,12 @@
 
 body {
     background-color: #09090a;
+    /* background: url(https://i.pinimg.com/originals/5f/08/58/5f085809f2b711643e4eb4974cc03c0e.gif) no-repeat; */
 
+    
     height: 100vh;
     color: white;
+    background-size: cover;
 }
 
 header {
@@ -44,6 +47,8 @@ button {
     font-size: 1rem;
     font-family: 'Inter';
     line-height: 125%;
+
+    cursor: pointer;
 }
 
 #form-habits {
